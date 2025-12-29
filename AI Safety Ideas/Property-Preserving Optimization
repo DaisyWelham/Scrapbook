@@ -1,0 +1,5 @@
+One idea worth considering is an optimization algorithm which preserves certain importain properties: it would be desirable from a safety perspective if we could prove that, for example, if we start with a neural network which can be proven to never press the red button, we could apply an optimization algorithm to it which would allow it to become much more capable at some other task while still never pressing the red button.
+
+This is related to safe exploration: usually optimization algorithms require an explicitly coded domain of valid answers or a penalty function to penalize answers outside of the feasible space. Can we build an optimization algorithm which is designed, from the ground up, to keep certain important properties of the initial hypothesis? 
+
+Currently I have no idea how to solve this but it is an interesting direction of thought. 
