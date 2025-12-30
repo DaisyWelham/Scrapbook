@@ -1,0 +1,7 @@
+The way humans navigate safe exploration seems to involve a good model of what would happen if they took any course of action and multiple filters we put it through. If I took action X I would make a large amount of money and it would be legal but unethical. Action Y is extremely profitable and legal and ethical but violates the laws of physics etc. We can quickly filter unsafe or otherwise undesirable actions out by treating our effective utility function as the minimum of several safety performance functions and our objective. 
+
+Gradient descent and similar algorithms (Adam) are the standard for training machine learning systems and they don't work in this way. Our agent may repeatedly consider obviously unsafe actions because that's what the maths pushes it to.
+
+I have an idea for achieving this multi-objective safety: train an ensemble of many agents where each agent is trained only on a single safety performance function or objective. Then, we perform the sexual genetic algorithm on the trained models and only accept a new model into our ensemble if it Pareto dominates a previous model.
+
+By doing this, it doesn't strictly solve safe exploration but may work well to safely aggregate multiple safety and performance objectives. Also doing this in simulation when training may have safe exploration consequences when deployed: dynaQ may perform well here. 
